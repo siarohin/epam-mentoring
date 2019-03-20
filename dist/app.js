@@ -1,18 +1,10 @@
 "use strict";
-var pizza = {
-    name: 'pepperoni',
-    price: 200,
-    getName: function () {
-        return this.name;
+var summAll = function () {
+    var array = [];
+    for (var _i = 0; _i < arguments.length; _i++) {
+        array[_i] = arguments[_i];
     }
+    return array.reduce(function (acc, item) { return acc + item; });
 };
-console.log(pizza.getName());
-var toppings = ['pepperoni'];
-var order = {
-    pizza: pizza,
-    toppings: toppings,
-};
-function createOrder(pizza, toppings) {
-    return { pizza: pizza, toppings: toppings };
-}
-console.log(createOrder(pizza, toppings));
+var summator = summAll(1, 2, 3, 4, 5, 6, 7);
+console.log(summator);

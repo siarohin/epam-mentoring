@@ -1,22 +1,4 @@
-const pizza = {
-    name: 'pepperoni',
-    price: 200,
-    getName() {
-        return this.name;
-    }
-};
+const summAll = (...array:number[]) => array.reduce((acc:number, item:number) => acc + item);
 
-console.log(pizza.getName());
-
-const toppings = ['pepperoni'];
-
-const order = {
-    pizza,
-    toppings,
-};
-
-function createOrder(pizza: any, toppings: any) {
-    return { pizza, toppings };
-}
-
-console.log(createOrder(pizza, toppings));
+const summator = summAll(1, 2, 3, 4, 5, 6, 7);
+console.log(summator);
