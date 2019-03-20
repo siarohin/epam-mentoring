@@ -1,6 +1,7 @@
-"use strict";
-// <!-- never going to return a value -->
-var orderError = function (error) {
-    throw new Error(error);
+var coupon = 25;
+var removeCoupon = function () {
+    coupon = null;
 };
-orderError("Something was wrong");
+console.log(coupon);
+removeCoupon();
+console.log(coupon);

@@ -1,6 +1,11 @@
-// <!-- never going to return a value -->
-const orderError = (error: string): never => {
-    throw new Error(error);
+let coupon: number | null = 25;
+
+const removeCoupon = ():void => {
+    coupon = null;
 };
 
-orderError(`Something was wrong`);
+console.log(coupon);
+
+removeCoupon();
+
+console.log(coupon);
