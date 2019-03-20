@@ -1,7 +1,8 @@
 "use strict";
-var pizza = {
-    title: 'pepperoni',
-    size: 'small',
+var priceOrderId = 100;
+priceOrderId = 200;
+var countOfGoods = 1001;
+var summOfAll = function (priceOrderId, c) {
+    return priceOrderId * countOfGoods;
 };
-var title = pizza.title, size = pizza.size;
-console.log(title);
+console.log(summOfAll(priceOrderId, priceOrderId));
