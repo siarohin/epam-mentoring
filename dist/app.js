@@ -1,11 +1,5 @@
-var pizzaSize = 'large';
-// const selectSize = (size: any): void => {
-//     pizzaSize = size;
-// };
-var selectSize = function (size) {
-    pizzaSize = size;
-};
-console.log(pizzaSize);
-// selectSize('meduuuum');
-selectSize('medium');
-console.log(pizzaSize);
+// let sumOrder: Function;
+var sumOrder;
+sumOrder = function (x, y) { return x * y; };
+var sum = sumOrder(25, 5);
+console.log(sum);
