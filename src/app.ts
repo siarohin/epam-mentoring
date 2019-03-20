@@ -1,11 +1,17 @@
-let coupon: number | null = 25;
+let pizzaSize: string = 'large';
 
-const removeCoupon = ():void => {
-    coupon = null;
+// const selectSize = (size: any): void => {
+//     pizzaSize = size;
+// };
+
+const selectSize = (size: 'small' | 'medium' | 'large'): void => {
+    pizzaSize = size;
 };
 
-console.log(coupon);
+console.log(pizzaSize);
 
-removeCoupon();
+// selectSize('meduuuum');
 
-console.log(coupon);
+selectSize('medium');
+
+console.log(pizzaSize);

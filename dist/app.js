@@ -1,7 +1,11 @@
-var coupon = 25;
-var removeCoupon = function () {
-    coupon = null;
+var pizzaSize = 'large';
+// const selectSize = (size: any): void => {
+//     pizzaSize = size;
+// };
+var selectSize = function (size) {
+    pizzaSize = size;
 };
-console.log(coupon);
-removeCoupon();
-console.log(coupon);
+console.log(pizzaSize);
+// selectSize('meduuuum');
+selectSize('medium');
+console.log(pizzaSize);
