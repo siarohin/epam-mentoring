@@ -1,10 +1,7 @@
-let priceOrderId: number = 100;
-priceOrderId = 900;
+const someText: string = 'Lorem';
 
-const countOfGoods = 1001;
+const getTextToUpperCase = (code: string):string => {
+    return code.toUpperCase();
+};
 
-const summOfAll = (priceOrderId: number, countOfGoods: number) => {
-    return priceOrderId * countOfGoods;
-}
-
-console.log(summOfAll(priceOrderId, countOfGoods));
+console.log(getTextToUpperCase(someText));

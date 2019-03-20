@@ -1,8 +1,6 @@
 "use strict";
-var priceOrderId = 100;
-priceOrderId = 900;
-var countOfGoods = 1001;
-var summOfAll = function (priceOrderId, countOfGoods) {
-    return priceOrderId * countOfGoods;
+var someText = 'Lorem';
+var getTextToUpperCase = function (code) {
+    return code.toUpperCase();
 };
-console.log(summOfAll(priceOrderId, countOfGoods));
+console.log(getTextToUpperCase(someText));
