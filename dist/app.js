@@ -1,7 +1,18 @@
 "use strict";
-function multiply(a, b) {
-    if (b === void 0) { b = 5; }
-    return a * b;
+var pizza = {
+    name: 'pepperoni',
+    price: 200,
+    getName: function () {
+        return this.name;
+    }
+};
+console.log(pizza.getName());
+var toppings = ['pepperoni'];
+var order = {
+    pizza: pizza,
+    toppings: toppings,
+};
+function createOrder(pizza, toppings) {
+    return { pizza: pizza, toppings: toppings };
 }
-console.log(multiply(5));
-console.log(multiply(5, 10));
+console.log(createOrder(pizza, toppings));
