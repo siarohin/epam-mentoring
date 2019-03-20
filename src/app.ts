@@ -1,7 +1,13 @@
-const someText: string = 'Lorem';
+const pizzas: number = 5;
 
-const getTextToUpperCase = (code: string):string => {
-    return code.toUpperCase();
+const orderDiscount = (orders: number): boolean => {
+    return orders >=3;
 };
 
-console.log(getTextToUpperCase(someText));
+if (orderDiscount(pizzas)) {
+    console.log(`You're entitled to a discount`);
+} else {
+    console.log(`Order more pizzas for a discount`);
+}
+
+orderDiscount(pizzas);

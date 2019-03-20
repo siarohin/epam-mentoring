@@ -1,6 +1,12 @@
 "use strict";
-var someText = 'Lorem';
-var getTextToUpperCase = function (code) {
-    return code.toUpperCase();
+var pizzas = 5;
+var orderDiscount = function (orders) {
+    return orders >= 3;
 };
-console.log(getTextToUpperCase(someText));
+if (orderDiscount(pizzas)) {
+    console.log("You're entitled to a discount");
+}
+else {
+    console.log("Order more pizzas for a discount");
+}
+orderDiscount(pizzas);
