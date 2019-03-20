@@ -1,7 +1,6 @@
 "use strict";
-var selectedTopping = 'pepperoni';
-var selectTopping = function (topping) {
-    selectedTopping = topping;
+// <!-- never going to return a value -->
+var orderError = function (error) {
+    throw new Error(error);
 };
-selectTopping('bacon');
-console.log(selectedTopping);
+orderError("Something was wrong");

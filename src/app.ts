@@ -1,8 +1,6 @@
-let selectedTopping: string = 'pepperoni';
-
-const selectTopping = (topping: string): void => {
-    selectedTopping = topping;
+// <!-- never going to return a value -->
+const orderError = (error: string): never => {
+    throw new Error(error);
 };
 
-selectTopping('bacon');
-console.log(selectedTopping);
+orderError(`Something was wrong`);
