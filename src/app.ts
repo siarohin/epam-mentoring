@@ -1,5 +1,8 @@
-//<!-- implicit -->
-let implpicitCoupon = 25;
+let selectedTopping: string = 'pepperoni';
 
-//<!-- explicit -->
-let explicitCoupon: number = 25;
+const selectTopping = (topping: string): void => {
+    selectedTopping = topping;
+};
+
+selectTopping('bacon');
+console.log(selectedTopping);

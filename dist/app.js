@@ -1,5 +1,7 @@
 "use strict";
-//<!-- implicit -->
-var implpicitCoupon = 25;
-//<!-- explicit -->
-var explicitCoupon = 25;
+var selectedTopping = 'pepperoni';
+var selectTopping = function (topping) {
+    selectedTopping = topping;
+};
+selectTopping('bacon');
+console.log(selectedTopping);
