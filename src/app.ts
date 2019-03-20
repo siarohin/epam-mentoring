@@ -1,5 +1,7 @@
-const toppings = ['One', 'Two'];
-const otherToppings = ['Three', 'Five', 'Six'];
+const pizza = {
+    title: 'pepperoni',
+    size: 'small',
+};
 
-const summOfToppings = [...toppings, ...otherToppings];
-console.log(summOfToppings);
+const { title, size } = pizza;
+console.log(title);
