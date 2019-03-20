@@ -1,9 +1,5 @@
-let coupon;
+//<!-- implicit -->
+let implpicitCoupon = 25;
 
-// let coupon: string;
-
-coupon = 25;
-
-coupon = 'str';
-
-coupon = true;
+//<!-- explicit -->
+let explicitCoupon: number = 25;

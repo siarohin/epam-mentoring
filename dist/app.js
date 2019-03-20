@@ -1,6 +1,5 @@
 "use strict";
-var coupon;
-// let coupon: string;
-coupon = 25;
-coupon = 'str';
-coupon = true;
+//<!-- implicit -->
+var implpicitCoupon = 25;
+//<!-- explicit -->
+var explicitCoupon = 25;
