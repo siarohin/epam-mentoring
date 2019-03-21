@@ -7,6 +7,7 @@ interface People extends StaticData {
     middleAge: number;
     maxAge?: number;
     sex: string[];
+    [key: number]: string;
 }
 
 let belarussian: People;
@@ -27,3 +28,6 @@ console.log(blr);
 console.log(blr.getNationMiddleAge());
 
 blr.maxAge = 100;
+blr[10] = 'Has pasport';
+
+console.log(blr);

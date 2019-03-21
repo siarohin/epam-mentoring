@@ -13,3 +13,5 @@ var blr = createNation('blr', 65, ['male', 'female']);
 console.log(blr);
 console.log(blr.getNationMiddleAge());
 blr.maxAge = 100;
+blr[10] = 'Has pasport';
+console.log(blr);
