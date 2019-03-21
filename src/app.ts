@@ -1,8 +1,11 @@
-interface People {
+interface StaticData {
+    getNationMiddleAge(): string[];
+}
+
+interface People extends StaticData {
     nation: string;
     middleAge: number;
     sex: string[];
-    getNationMiddleAge(): string[];
 }
 
 let belarussian: People;
