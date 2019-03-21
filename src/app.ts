@@ -1,11 +1,20 @@
-// let sumOrder: Function;
+let pizza: {name: string, size: string, cost: number, box?: boolean, getName(): string, getCost(): string};
 
-let sumOrder: (price: number, quantity?: number) => number;
+pizza = {
+    name: 'pepperoni',
+    size: 'medium',
+    cost: 500,
+    box: true,
+    getName() {
+        return this.name;
+    },
+    getCost() {
+        return this.cost;
+    }
+};
 
-sumOrder = (x, y = 10): number => {
-    return y ? x * y : x;
-}
+console.log(pizza.getName());
 
-const sum = sumOrder(25);
+console.log(pizza.getCost());
 
-console.log(sum);
+console.log(typeof pizza.getCost()); // ???

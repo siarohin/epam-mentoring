@@ -1,8 +1,16 @@
-// let sumOrder: Function;
-var sumOrder;
-sumOrder = function (x, y) {
-    if (y === void 0) { y = 10; }
-    return y ? x * y : x;
+var pizza;
+pizza = {
+    name: 'pepperoni',
+    size: 'medium',
+    cost: 500,
+    box: true,
+    getName: function () {
+        return this.name;
+    },
+    getCost: function () {
+        return this.cost;
+    }
 };
-var sum = sumOrder(25);
-console.log(sum);
+console.log(pizza.getName());
+console.log(pizza.getCost());
+console.log(typeof pizza.getCost()); // ???
