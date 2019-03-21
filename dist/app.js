@@ -1,5 +1,7 @@
 // let sumOrder: Function;
 var sumOrder;
-sumOrder = function (x, y) { return x * y; };
-var sum = sumOrder(25, 5);
+sumOrder = function (x, y) {
+    return y ? x * y : x;
+};
+var sum = sumOrder(25, 10);
 console.log(sum);

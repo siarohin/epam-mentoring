@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/siarohin/epam-mentoring/issues"
   },
-  "homepage": "https://github.com/siarohin/epam-mentoring#readme"
+  "homepage": "https://github.com/siarohin/epam-mentoring#readme",
+  "dependencies": {
+    "jshint": "^2.10.2"
+  }
 }
