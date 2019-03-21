@@ -1,13 +1,14 @@
-// type Pizza = {
-//     name: string,
-//     size: string[],
-// }
-var pizza;
-var createPizza = function (name, size) {
+var belarussian;
+var createNation = function (nation, middleAge, sex) {
     return {
-        name: name,
-        size: size,
+        nation: nation,
+        middleAge: middleAge,
+        sex: sex,
+        getNationMiddleAge: function () {
+            return this.nation;
+        }
     };
 };
-pizza = createPizza('pepperoni', ['small', 'medium', 'large']);
-console.log(pizza);
+var blr = createNation('blr', 65, ['male', 'female']);
+console.log(blr);
+console.log(blr.getNationMiddleAge());

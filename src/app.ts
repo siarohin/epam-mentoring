@@ -1,26 +1,23 @@
-// type Pizza = {
-//     name: string,
-//     size: string[],
-// }
-
-interface Pizza {
-    name: string,
-    size: string[],
+interface People {
+    nation: string;
+    middleAge: number;
+    sex: string[];
+    getNationMiddleAge(): string[];
 }
 
-interface Pizzas {
-    data: Pizza[],
-}
+let belarussian: People;
 
-let pizza: Pizza;
-
-const createPizza = (name: string, size: string[]) => {
+const createNation = (nation: string, middleAge: number, sex: string[]): People => {
     return {
-        name,
-        size,
+        nation,
+        middleAge,
+        sex,
+        getNationMiddleAge() {
+            return this.nation;
+        }
     };
-}
+};
 
-pizza = createPizza('pepperoni', ['small', 'medium', 'large']);
-
-console.log(pizza);
+const blr = createNation('blr', 65, ['male', 'female']);
+console.log(blr);
+console.log(blr.getNationMiddleAge());
