@@ -1,4 +1,13 @@
-const sizes: [string, number, boolean] = ['large', 200, true];
+type CustomSizes = 'small' | 'medium' | 20;
+type Callback = (size: CustomSizes) => void;
 
-const[first, ...args] = sizes;
-console.log(first);
+
+let pizzaSize: CustomSizes = 20;
+
+const selectSize: Callback = (x) => {
+    pizzaSize = x;
+}
+
+selectSize(pizzaSize);
+
+console.log(pizzaSize);

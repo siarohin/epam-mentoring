@@ -1,3 +1,6 @@
-var sizes = ['large', 200, true];
-var first = sizes[0], args = sizes.slice(1);
-console.log(first);
+var pizzaSize = 20;
+var selectSize = function (x) {
+    pizzaSize = x;
+};
+selectSize(pizzaSize);
+console.log(pizzaSize);
