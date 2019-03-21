@@ -1,17 +1,29 @@
-var belarussian;
-var createNation = function (nation, middleAge, sex) {
-    return {
-        nation: nation,
-        middleAge: middleAge,
-        sex: sex,
-        getNationMiddleAge: function () {
-            return this.nation;
-        }
+// function Car(name: string) {
+//     this.name = name;
+//     this.count = 0;
+// }
+// Car.prototype.addNewCount = function addNewCount(count: number) {
+//     this.count += 1;
+// }
+// const carWithoutBrandName = new Car('noname');
+// console.log(carWithoutBrandName);
+// carWithoutBrandName.addNewCount();
+// carWithoutBrandName.addNewCount();
+// carWithoutBrandName.addNewCount();
+// console.log(carWithoutBrandName);
+var Car = /** @class */ (function () {
+    function Car(name) {
+        this.name = name;
+        this.count = 0;
+    }
+    Car.prototype.addNewCount = function () {
+        return this.count += 1;
     };
-};
-var blr = createNation('blr', 65, ['male', 'female']);
-console.log(blr);
-console.log(blr.getNationMiddleAge());
-blr.maxAge = 100;
-blr[10] = 'Has pasport';
-console.log(blr);
+    return Car;
+}());
+var carWithoutBrandName = new Car('noname');
+console.log(carWithoutBrandName);
+carWithoutBrandName.addNewCount();
+carWithoutBrandName.addNewCount();
+carWithoutBrandName.addNewCount();
+console.log(carWithoutBrandName);

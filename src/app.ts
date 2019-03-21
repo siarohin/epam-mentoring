@@ -1,33 +1,44 @@
-interface StaticData {
-    getNationMiddleAge(): string[];
+// function Car(name: string) {
+//     this.name = name;
+//     this.count = 0;
+// }
+
+// Car.prototype.addNewCount = function addNewCount(count: number) {
+//     this.count += 1;
+// }
+
+
+// const carWithoutBrandName = new Car('noname');
+
+// console.log(carWithoutBrandName);
+
+// carWithoutBrandName.addNewCount();
+// carWithoutBrandName.addNewCount();
+// carWithoutBrandName.addNewCount();
+
+// console.log(carWithoutBrandName);
+
+
+class Car {
+    name: string;
+    count: number;
+
+    constructor(name: string) {
+        this.name = name;
+        this.count = 0;
+    }
+
+    addNewCount() {
+        return this.count += 1;
+    }
 }
 
-interface People extends StaticData {
-    nation: string;
-    middleAge: number;
-    maxAge?: number;
-    sex: string[];
-    [key: number]: string;
-}
+const carWithoutBrandName = new Car('noname');
 
-let belarussian: People;
+console.log(carWithoutBrandName);
 
-const createNation = (nation: string, middleAge: number, sex: string[]): People => {
-    return {
-        nation,
-        middleAge,
-        sex,
-        getNationMiddleAge() {
-            return this.nation;
-        }
-    };
-};
+carWithoutBrandName.addNewCount();
+carWithoutBrandName.addNewCount();
+carWithoutBrandName.addNewCount();
 
-const blr = createNation('blr', 65, ['male', 'female']);
-console.log(blr);
-console.log(blr.getNationMiddleAge());
-
-blr.maxAge = 100;
-blr[10] = 'Has pasport';
-
-console.log(blr);
+console.log(carWithoutBrandName);
