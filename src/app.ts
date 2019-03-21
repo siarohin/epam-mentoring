@@ -1,10 +1,17 @@
-class Coupon {
-    static allowed = ['pepperoni', 'blazing inferno'];
-    static create(percent: number) {
-        return percent;
+function reverse(str: string): string;
+function reverse<T>(arr: T[]): T[];
+
+function reverse<T>(stringOrArray: string | T[]): string | T[] {
+    if (typeof stringOrArray === 'string') {
+        return stringOrArray
+                .split('')
+                .reverse()
+                .join('');
     }
+    return stringOrArray
+            .slice()
+            .reverse();
 }
 
-new Coupon();
-
-console.log(Coupon.create(100));
+console.log(reverse('peppe'));
+console.log(reverse(['peppe', 'somethingElse']));
