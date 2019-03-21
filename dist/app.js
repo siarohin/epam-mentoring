@@ -1,12 +1,13 @@
-var Sizes;
-(function (Sizes) {
-    Sizes["Small"] = "small";
-    Sizes["Medium"] = "medium";
-    Sizes[Sizes["Large"] = 500] = "Large";
-})(Sizes || (Sizes = {}));
-var selected = Sizes.Small;
-var updateSize = function (size) {
-    selected = size;
+// type Pizza = {
+//     name: string,
+//     size: string[],
+// }
+var pizza;
+var createPizza = function (name, size) {
+    return {
+        name: name,
+        size: size,
+    };
 };
-updateSize(Sizes.Large);
-console.log(Sizes);
+pizza = createPizza('pepperoni', ['small', 'medium', 'large']);
+console.log(pizza);
