@@ -1,27 +1,10 @@
-class Car {
-    readonly name: string;
-    count: number;
-
-    constructor(name: string) {
-        this.name = name;
-        this.count = 0;
-    }
-
-    addNewCount() {
-        return this.count += 1;
+class Coupon {
+    static allowed = ['pepperoni', 'blazing inferno'];
+    static create(percent: number) {
+        return percent;
     }
 }
 
-const carWithoutBrandName = new Car('noname');
+new Coupon();
 
-console.log(carWithoutBrandName);
-
-carWithoutBrandName.addNewCount();
-carWithoutBrandName.addNewCount();
-carWithoutBrandName.addNewCount();
-
-console.log(carWithoutBrandName);
-
-carWithoutBrandName.name = 'Car with brandName';
-
-console.log(carWithoutBrandName);
+console.log(Coupon.create(100));

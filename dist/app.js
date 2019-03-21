@@ -1,18 +1,11 @@
-var Car = /** @class */ (function () {
-    function Car(name) {
-        this.name = name;
-        this.count = 0;
+var Coupon = /** @class */ (function () {
+    function Coupon() {
     }
-    Car.prototype.addNewCount = function () {
-        return this.count += 1;
+    Coupon.create = function (percent) {
+        return percent;
     };
-    return Car;
+    Coupon.allowed = ['pepperoni', 'blazing inferno'];
+    return Coupon;
 }());
-var carWithoutBrandName = new Car('noname');
-console.log(carWithoutBrandName);
-carWithoutBrandName.addNewCount();
-carWithoutBrandName.addNewCount();
-carWithoutBrandName.addNewCount();
-console.log(carWithoutBrandName);
-carWithoutBrandName.name = 'Car with brandName';
-console.log(carWithoutBrandName);
+new Coupon();
+console.log(Coupon.create(100));
