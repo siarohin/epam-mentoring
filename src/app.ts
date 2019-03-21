@@ -1,6 +1,4 @@
-const sizes: number[] = [100, 200, 300];
+const sizes: [string, number, boolean] = ['large', 200, true];
 
-const typings: Array<string> = ['small', 'large'];
-
-console.log(sizes);
-console.log(typings);
+const[first, ...args] = sizes;
+console.log(first);
