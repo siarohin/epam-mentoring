@@ -1,9 +1,9 @@
 {
   "compilerOptions": {
     /* Basic Options */
-    "target": "es5",      
-    "module": "commonjs",   
-    "strictNullChecks": false,
+    "target": "es5",
+    "module": "commonjs",
+    "strictNullChecks": true,
     "outDir": "dist",
     // "esModuleInterop": true
   }
