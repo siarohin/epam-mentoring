@@ -1,20 +1,6 @@
-let pizza: {name: string, size: string, cost: number, box?: boolean, getName(): string, getCost(): string};
+const sizes: number[] = [100, 200, 300];
 
-pizza = {
-    name: 'pepperoni',
-    size: 'medium',
-    cost: 500,
-    box: true,
-    getName() {
-        return this.name;
-    },
-    getCost() {
-        return this.cost;
-    }
-};
+const typings: Array<string> = ['small', 'large'];
 
-console.log(pizza.getName());
-
-console.log(pizza.getCost());
-
-console.log(typeof pizza.getCost()); // ???
+console.log(sizes);
+console.log(typings);
