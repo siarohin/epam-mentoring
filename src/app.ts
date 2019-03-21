@@ -1,14 +1,13 @@
-type Pizza = {name: string, size: number};
+enum Sizes {
+    Small,
+    Medium,
+    Large,
+}
 
-const pizza: Pizza = {
-    name: 'pepperoni',
-    size: 30,
-};
+enum Sizes {
+    ExtraLarge = 3,
+}
 
-const serialized = JSON.stringify(pizza);
-
-console.log(serialized);
-
-const getNameFromJSON = (obj: string) => (JSON.parse(obj) as Pizza).name;
-
-console.log(getNameFromJSON(serialized));
+console.log(Sizes[Sizes.ExtraLarge]);
+console.log(Sizes[Sizes.ExtraLarge] === Sizes[3]);
+console.log(Sizes.ExtraLarge);
