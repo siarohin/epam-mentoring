@@ -1,12 +1,6 @@
-function doSmt() {
-  // this === window
-  console.log(this);
-}
-
-doSmt();
-
-
 const myObj ={
+  name: 'Aleksandr',
+
   doSmt() {
     // this === myObj
     console.log(this);
@@ -16,17 +10,20 @@ const myObj ={
 myObj.doSmt();
 
 
-class myClass {
-  name: string;
-  constructor(name) {
-    this.name = name;
-  }
-  doSmt() {
-    // this === new Instance
-    console.log(this.name);
-  }
+
+// <!-- Example of Call -->
+// 1. We coudn't use default value Bye:`text?: string = 'Bye' with unnecessary params === ?`
+// 2. But we could use default value`Bye: `text: string = 'Bye'` with necessary params
+function sayHi(text?: string): void {
+  console.log(`${this.name} say ${text ? text : 'Bye'}`); // if text => text, else 'Bye'
 }
+sayHi.call(myObj, 'Hi'); // Aleksandr say Hi
+sayHi.call(myObj); // Aleksandr say Bye
 
-const myInstance = new myClass('myName');
 
-myInstance.doSmt();
+
+// <!-- Example of Bind -->
+
+const myFunction = sayHi.bind(myObj, 'Hello');
+myFunction(); // Aleksandr say Hello
+
