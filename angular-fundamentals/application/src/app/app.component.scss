@@ -1,0 +1,26 @@
+.main {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  margin: 1.5em 0;
+
+  .main__title {
+    font-size: 2.5em;
+    word-spacing: 0.25em;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.regular {
+  font-weight: 400;
+}
+
+.medium {
+  font-weight: 500;
+}
+
+.bold {
+  font-weight: 700;
+}
