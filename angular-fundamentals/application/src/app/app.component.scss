@@ -1,7 +1,8 @@
 .main {
   $font-size: 2.5em;
+  $width: 100%;
 
-  width: 100%;
+  width: $width;
   display: flex;
   flex-flow: column wrap;
   align-items: center;
@@ -21,6 +22,34 @@
     height: 40px;
     margin: 1.5em 0;
     border-radius: .5em;
+  }
+
+  input[type=text] {
+    background-image: none;
+    -webkit-box-shadow: none;
+       -moz-box-shadow: none;
+      background-color: transparent;
+    box-shadow: none;
+    outline: none;
+  }
+
+  .main__input {
+    width: $width / 3;
+    font-size: $font-size / 2;
+    font-weight: 400;
+    color: #333;
+    height: 2.5em;
+    border: 1px solid #333;
+    padding: 0 .5em
+  }
+
+  .main__input:focus {
+    border: 1px solid #f60;
+    font-style: italic;
+  }
+
+  .main__monitor {
+    margin: 2em 0;
   }
 
   .small-size {
