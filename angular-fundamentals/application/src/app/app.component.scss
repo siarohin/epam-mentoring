@@ -1,17 +1,30 @@
 .main {
+  $font-size: 2.5em;
+
   width: 100%;
   display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
+  flex-flow: column wrap;
+  align-items: center;
+  text-align: center;
   margin: 1.5em 0;
 
   .main__title {
-    font-size: 2.5em;
+    font-size: $font-size;
     word-spacing: 0.25em;
     margin: 0;
     padding: 0;
     width: 100%;
-    text-align: center;
+  }
+
+  .main__logo {
+    width: 165px;
+    height: 40px;
+    margin: 1.5em 0;
+    border-radius: .5em;
+  }
+
+  .small-size {
+    font-size: $font-size / 2;
   }
 
   .main__number {

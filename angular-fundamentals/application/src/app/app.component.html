@@ -1,7 +1,13 @@
 <div class="main">
-  <h1 class="main__title medium">{{ toUpperCase(title) }}</h1>
-  <article class="main__number">
-      {{ isEven([numberOne, numberTwo]) ? ':)' : ':(' }}
-  </article>
+  <h1 class="main__title medium" [innerHTML]="toUpperCase(title)"></h1>
+
+  <!-- TODO -->
+  <div [style]="backgroundRow" class="main__logo"></div>
+
+    <article class="main__number">
+      <h2 class="main__title small-size regular">{{ title }}</h2>
+        {{ isEven([numberOne, numberTwo]) ? ':)' : ':(' }}
+    </article>
+
 </div>
 

@@ -10,6 +10,9 @@ export class AppComponent {
   numberOne: number = 1;
   numberTwo: number = 5;
 
+  // TODO
+  backgroundRow: string = 'background: #333 url(https://coursehunters.net/images/logo.png) no-repeat';
+
   constructor() {
     this.title = 'Ultimate Angular';
   }
