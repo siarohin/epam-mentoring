@@ -1,6 +1,13 @@
 import { Component } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
-import { stringify } from '@angular/core/src/render3/util';
+
+
+interface People {
+  id: number;
+  name: string;
+  sex: string;
+  isActive: boolean;
+}
 
 @Component({
   selector: 'app-root',
@@ -13,6 +20,38 @@ export class AppComponent {
   numberTwo = 5;
   name = '';
   backgroundRow: object;
+
+  people: People[] = [{
+    id: 1,
+    name: 'Ann',
+    sex: 'female',
+    isActive: true,
+  },
+  {
+    id: 2,
+    name: 'Aleksandr',
+    sex: 'male',
+    isActive: true,
+  },
+  {
+    id: 3,
+    name: 'Siarhei',
+    sex: 'male',
+    isActive: false,
+  },
+  {
+    id: 4,
+    name: 'Oleg',
+    sex: 'male',
+    isActive: false,
+  },
+  {
+    id: 5,
+    name: 'Kate',
+    sex: 'female',
+    isActive: true,
+  },
+];
 
 
   constructor(private sanitizer: DomSanitizer) {

@@ -19,6 +19,23 @@
     Searching for... {{ name }}
   </div>
 
+  <!-- ng-template -->
+  <ul class="main__list">
+    <ng-template ngFor let-person let-i="index" [ngForOf]="people">
+      <li>
+        {{ i + 1 }}: {{ person.name }}
+      </li>
+    </ng-template>
+  </ul>
+
+  <!-- *ngFor-->
+  <ul class="main__list">
+    <li *ngFor="let person of people; let i = index;">
+      {{ i + 1 }}: {{ person.name }}
+    </li>
+  </ul>
+
+
     <article class="main__number">
       <h2 class="main__title small-size regular">{{ title }}</h2>
         {{ isEven([numberOne, numberTwo]) ? ':)' : ':(' }}
