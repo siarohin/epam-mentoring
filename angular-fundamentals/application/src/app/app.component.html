@@ -19,18 +19,25 @@
     Searching for... {{ name }}
   </div>
 
-  <!-- ng-template -->
-  <ul class="main__list">
-    <ng-template ngFor let-person let-i="index" [ngForOf]="people">
-      <li>
-        {{ i + 1 }}: {{ person.name }}
-      </li>
-    </ng-template>
-  </ul>
-
   <!-- *ngFor-->
   <ul class="main__list">
     <li *ngFor="let person of people; let i = index;">
+
+      <!-- variable 1
+        <span
+          class="main__status"
+          [ngClass]="{
+            'checked-in': person.isActive,
+            'checked-out': !person.isActive
+          }"
+        ></span>
+      -->
+
+      <span
+        class="main__status"
+        [class.checked-in]="person.isActive"
+        [class.checked-out]="!person.isActive"
+      ></span>
       {{ i + 1 }}: {{ person.name }}
     </li>
   </ul>
