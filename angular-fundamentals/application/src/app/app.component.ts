@@ -1,12 +1,18 @@
 import { Component } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
+import { ChildActivationStart } from '@angular/router';
 
 
+interface Child {
+  name: string;
+  age: number;
+}
 interface People {
   id: number;
   name: string;
   sex: string;
   isActive: boolean;
+  children: Child[] | null;
 }
 
 @Component({
@@ -26,30 +32,38 @@ export class AppComponent {
     name: 'Ann',
     sex: 'female',
     isActive: true,
+    children: null,
   },
   {
     id: 2,
     name: 'Aleksandr',
     sex: 'male',
     isActive: true,
+    children: [{
+      name: 'Tedd',
+      age: 20,
+    }],
   },
   {
     id: 3,
     name: 'Siarhei',
     sex: 'male',
     isActive: false,
+    children: [{
+      name: 'Teddy',
+      age: 15,
+    },
+    {
+      name: 'Alice',
+      age: 10,
+    }],
   },
   {
     id: 4,
     name: 'Oleg',
     sex: 'male',
     isActive: false,
-  },
-  {
-    id: 5,
-    name: 'Kate',
-    sex: 'female',
-    isActive: true,
+    children: null,
   },
 ];
 

@@ -52,6 +52,15 @@
       ></span> -->
 
       {{ i + 1 }}: {{ person.name }}
+      <div class="children"
+        [ngStyle]="{
+          'float': 'right',
+          'marginLeft': '1em',
+          'opacity': '.5'
+        }">
+        Children: {{ person.children?.length || 0 }}
+      </div>
+
     </li>
   </ul>
 
