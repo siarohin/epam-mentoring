@@ -1,0 +1,44 @@
+<!-- *ngFor-->
+<ul class="main__list">
+    <li *ngFor="let person of people; let i = index;">
+
+      <!-- variable 1
+        <span
+          class="main__status"
+          [ngClass]="{
+            'checked-in': person.isActive,
+            'checked-out': !person.isActive
+          }"
+        ></span>
+      -->
+
+      <span
+        class="main__status"
+        [ngClass]="{
+          'checked-in': person.isActive,
+          'checked-out': !person.isActive
+        }"
+        [ngStyle]="{
+          opacity: (person.isActive ? '1' : '.5')
+        }"
+      ></span>
+
+      <!-- <span
+        class="main__status"
+        [class.checked-in]="person.isActive"
+        [class.checked-out]="!person.isActive"
+        [style.opacity]="(person.isActive ? '1' : '.5')"
+      ></span> -->
+
+      {{ i + 1 }}: {{ person.name }}
+      <div class="children"
+        [ngStyle]="{
+          'float': 'right',
+          'marginLeft': '1em',
+          'opacity': '.5'
+        }">
+        Children: {{ person.children?.length || 0 }}
+      </div>
+
+    </li>
+</ul>
