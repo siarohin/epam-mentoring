@@ -15,9 +15,6 @@ export class DashboardCountComponent {
     if (!this.items) {
       return;
     }
-    return this.items.filter((person: People) => {
-      return person.isActive;
-    }).length;
+    return this.items.filter((person: People) => person.isActive).length;
   }
-
 }
