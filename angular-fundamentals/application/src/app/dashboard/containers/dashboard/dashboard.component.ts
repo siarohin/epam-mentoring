@@ -25,9 +25,9 @@ export class DashboardComponent implements OnInit {
         name: 'Aleksandr',
         sex: 'male',
         isActive: true,
-      children: [{
-        name: 'Tedd',
-        age: 20,
+        children: [{
+          name: 'Tedd',
+          age: 20,
       }],
     },
     {
@@ -50,7 +50,7 @@ export class DashboardComponent implements OnInit {
       sex: 'male',
       isActive: false,
       children: null,
-    }]
+    }];
   }
 }
 

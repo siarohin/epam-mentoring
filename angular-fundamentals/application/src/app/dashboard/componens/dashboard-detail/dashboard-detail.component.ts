@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { People } from '../../models/dashboard.interface';
 
 @Component({
   selector: 'app-dashboard-detail',
@@ -7,6 +8,8 @@ import { Component } from '@angular/core';
 })
 
 export class DashboardDetailComponent {
+  @Input()
+  detail: People;
   constructor() {
 
   }

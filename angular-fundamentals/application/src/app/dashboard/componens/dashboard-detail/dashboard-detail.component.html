@@ -1,1 +1,8 @@
-<h3>Dashboard detail</h3>
+<ul class="main__list">
+  <span class="main__status" [ngClass]="{ 'checked-in': detail.isActive }"></span>
+  <li>{{ detail.name }}
+    <div class="children">
+      Children: {{ detail.children?.length || 0 }}
+    </div>
+  </li>
+</ul>

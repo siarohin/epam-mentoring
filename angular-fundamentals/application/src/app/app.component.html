@@ -1,29 +1,7 @@
 <div class="main">
   <h1 class="main__title medium" [innerHTML]="toUpperCase(title)"></h1>
 
-  <!-- TODO -->
   <div [style]="backgroundRow" class="main__logo"></div>
-  <input
-    type="text"
-    class="main__input"
-    (input)="handleChange($event.target.value)"
-    #username
-  />
-
-  <button
-    (click)="handleClick(username.value)">
-    Reset value
-  </button>
-
-  <div class="main__monitor" *ngIf="name.length">
-    Searching for... {{ name }}
-  </div>
-
-
-    <article class="main__number">
-      <h2 class="main__title small-size regular">{{ title }}</h2>
-        {{ isEven([numberOne, numberTwo]) ? ':)' : ':(' }}
-    </article>
 
     <app-dashboard></app-dashboard>
 
