@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { People } from '../../models/dashboard.interface';
 
 @Component ({
@@ -6,8 +6,13 @@ import { People } from '../../models/dashboard.interface';
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.scss']
 })
-export class DashboardComponent {
-  people: People[] = [
+export class DashboardComponent implements OnInit {
+  people: People[];
+  constructor() {
+
+  }
+  ngOnInit() {
+    this.people = [
       {
         id: 1,
         name: 'Ann',
@@ -45,7 +50,7 @@ export class DashboardComponent {
       sex: 'male',
       isActive: false,
       children: null,
-    },
-  ];
+    }]
+  }
 }
 
