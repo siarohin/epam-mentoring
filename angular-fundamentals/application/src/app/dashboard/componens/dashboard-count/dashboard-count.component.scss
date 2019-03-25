@@ -1,4 +1,26 @@
+$aqua: #7fffd4;
+$gray: #333;
+$white: #fff;
+
 * {
   font-size: 1em;
   font-weight: 400;
+}
+
+.list__count {
+  display: flex;
+  margin: 0 0 0 1em;
+  justify-content: center;
+  align-items: center;
+  float: right;
+  background: $gray;
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 50%;
+  font-size: .5em;
+  color: $white;
+  &.active {
+    background: $aqua;
+    color: $gray;
+  }
 }

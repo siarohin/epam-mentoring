@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { People } from '../../models/dashboard.interface';
 
 @Component({
   selector: 'app-dashboard-count',
@@ -7,8 +8,16 @@ import { Component } from '@angular/core';
 })
 
 export class DashboardCountComponent {
-  constructor() {
+  @Input()
+  items: People[];
 
+  checkedInCount(): number {
+    if (!this.items) {
+      return;
+    }
+    return this.items.filter((person: People) => {
+      return person.isActive;
+    }).length;
   }
 
 }
