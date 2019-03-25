@@ -8,15 +8,16 @@ import { DomSanitizer } from '@angular/platform-browser';
 })
 export class AppComponent {
   title: string;
-  numberOne: number = 1;
-  numberTwo: number = 5;
-  name: string = 'Enter your name';
+  numberOne = 1;
+  numberTwo = 5;
+  name = 'Enter your name';
   backgroundRow: object;
 
 
   constructor(private sanitizer: DomSanitizer) {
     this.title = 'Ultimate Angular';
-    this.backgroundRow = this.sanitizer.bypassSecurityTrustStyle('background: #333 url(https://coursehunters.net/images/logo.png) no-repeat');
+    this.backgroundRow = this.sanitizer
+      .bypassSecurityTrustStyle('background: #333 url(https://coursehunters.net/images/logo.png) no-repeat');
   }
 
   toUpperCase(str: string): string {
