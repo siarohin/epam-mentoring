@@ -11,7 +11,7 @@ export class AppComponent {
   title: string;
   numberOne = 1;
   numberTwo = 5;
-  name = 'Enter your name';
+  name = '';
   backgroundRow: object;
 
 
@@ -34,7 +34,7 @@ export class AppComponent {
     this.name = value;
   }
 
-  handleClick(value: string) {
-    this.name = value;
+  handleClick() {
+    this.name = '';
   }
 }
