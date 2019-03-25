@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
+import { stringify } from '@angular/core/src/render3/util';
 
 @Component({
   selector: 'app-root',
@@ -30,6 +31,10 @@ export class AppComponent {
   }
 
   handleChange(value: string): void {
+    this.name = value;
+  }
+
+  handleClick(value: string) {
     this.name = value;
   }
 }

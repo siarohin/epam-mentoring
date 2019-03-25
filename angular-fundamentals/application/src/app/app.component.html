@@ -5,17 +5,14 @@
   <div [style]="backgroundRow" class="main__logo"></div>
   <input
     type="text"
-    [ngModel]="name"
     class="main__input"
-    (ngModelChange)="handleChange($event)"
+    #username
   />
 
-  <!-- TODO -->
-  <input
-    type="text"
-    [(ngModel)]="name"
-    class="main__input"
-  />
+  <button
+    (click)="handleClick(username.value)">
+    Get value
+  </button>
 
   <div class="main__monitor">{{ name }}</div>
 
