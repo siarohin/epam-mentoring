@@ -29,17 +29,7 @@ export class AppComponent {
     return result % 2 === 0 ? true : false;
   }
 
-  handleFocus(event: any): void {
-    if (event.target.value === this.name) {
-      event.target.value = '';
-    }
-  }
-
-  handleInput(event: any): void {
-    this.name = event.target.value;
-  }
-
-  handleBlur(event: any): void {
-    event.target.value = event.target.value || this.name;
+  handleChange(value: string): void {
+    this.name = value;
   }
 }

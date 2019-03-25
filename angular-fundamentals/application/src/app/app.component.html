@@ -5,11 +5,16 @@
   <div [style]="backgroundRow" class="main__logo"></div>
   <input
     type="text"
-    [value]="name"
+    [ngModel]="name"
     class="main__input"
-    (focus)="handleFocus($event)"
-    (blur)="handleBlur($event)"
-    (input)="handleInput($event)"
+    (ngModelChange)="handleChange($event)"
+  />
+
+  <!-- TODO -->
+  <input
+    type="text"
+    [(ngModel)]="name"
+    class="main__input"
   />
 
   <div class="main__monitor">{{ name }}</div>
