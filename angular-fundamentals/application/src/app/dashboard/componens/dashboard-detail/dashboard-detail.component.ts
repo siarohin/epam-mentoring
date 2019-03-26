@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnChanges, Input, Output, EventEmitter } from '@angular/core';
 import { People } from '../../models/dashboard.interface';
 
 @Component({
@@ -7,7 +7,7 @@ import { People } from '../../models/dashboard.interface';
   styleUrls: ['./dashboard-detail.component.scss']
 })
 
-export class DashboardDetailComponent {
+export class DashboardDetailComponent implements OnChanges {
   @Input()
   detail: People;
 
@@ -18,7 +18,14 @@ export class DashboardDetailComponent {
   remove: EventEmitter<any> = new EventEmitter();
 
   editing = false;
+
   constructor() {
+  }
+
+  ngOnChanges(changes) {
+    if (changes.detail) {
+      this.detail = Object.assign({}, changes.detail.currentValue);
+    }
   }
 
   onNameChange(value: string) {

@@ -5,6 +5,12 @@
   </app-dashboard-count>
 </h2>
 
+<!-- TODO -->
+<span *ngFor="let person of people;">
+  {{ person.name }}
+</span>
+<!-- //TODO -->
+
 <app-dashboard-detail
   *ngFor="let person of people;"
   [detail]="person"
