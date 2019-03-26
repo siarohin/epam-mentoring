@@ -20,7 +20,7 @@ export class DashboardComponent implements OnInit {
   }
 
   handleEdit(event: People) {
-    this.people.map((person: People) => {
+    this.people = this.people.map((person: People) => {
       if (person.id === event.id) {
         // Immutable
         person = Object.assign({}, person, event);
