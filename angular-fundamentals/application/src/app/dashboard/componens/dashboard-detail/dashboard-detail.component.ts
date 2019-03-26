@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { People } from '../../models/dashboard.interface';
 
 @Component({
@@ -10,8 +10,30 @@ import { People } from '../../models/dashboard.interface';
 export class DashboardDetailComponent {
   @Input()
   detail: People;
-  constructor() {
 
+  @Output()
+  edit: EventEmitter<any> = new EventEmitter();
+
+  @Output()
+  remove: EventEmitter<any> = new EventEmitter();
+
+  editing = false;
+  constructor() {
+  }
+
+  onNameChange(value: string) {
+    this.detail.name = value;
+  }
+
+  toogleEdit() {
+    if (this.editing) {
+      this.edit.emit(this.detail);
+    }
+    this.editing = !this.editing;
+  }
+
+  onRemove() {
+    this.remove.emit(this.detail);
   }
 
 }

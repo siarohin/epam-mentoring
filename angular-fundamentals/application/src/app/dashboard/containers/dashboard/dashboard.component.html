@@ -1,5 +1,5 @@
 
-<h2>List of the people
+<h2 class="dashboard__title">List of the people
   <app-dashboard-count
     [items]="people">
   </app-dashboard-count>
@@ -7,5 +7,7 @@
 
 <app-dashboard-detail
   *ngFor="let person of people;"
-  [detail]="person">
+  [detail]="person"
+  (edit)="handleEdit($event)"
+  (remove)="handleRemove($event)">
 </app-dashboard-detail>

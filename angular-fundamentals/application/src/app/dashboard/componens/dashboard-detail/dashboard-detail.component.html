@@ -1,8 +1,14 @@
 <ul class="main__list">
-  <span class="main__status" [ngClass]="{ 'checked-in': detail.isActive }"></span>
-  <li>{{ detail.name }}
-    <div class="children">
+  <li>
+    <span class="main__status order-first" [ngClass]="{ 'checked-in': detail.isActive }"></span>
+    <div class="list-item order-second" *ngIf="editing">
+      <input class="main__input" type="text" [value]="detail.name" (input)="onNameChange(name.value)" #name />
+    </div>
+    <div class="list-item order-first list-item_name" *ngIf="!editing">{{ detail.name }}</div>
+    <div class="children list-item order-third">
       Children: {{ detail.children?.length || 0 }}
     </div>
+    <button (click)="toogleEdit()" class="list-button order-third">{{ editing ? 'Done' : 'Edit' }}</button>
+    <button *ngIf="editing" (click)="onRemove()" class="list-button order-third">Delete</button>
   </li>
 </ul>
