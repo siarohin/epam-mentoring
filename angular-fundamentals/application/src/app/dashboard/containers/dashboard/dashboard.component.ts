@@ -53,12 +53,20 @@ export class DashboardComponent implements OnInit {
     }];
   }
 
-  handleEdit(event) {
-    console.log(event);
+  handleEdit(event: People) {
+    this.people.map((person: People) => {
+      if (person.id === event.id) {
+        // Immutable
+        person = Object.assign({}, person, event);
+      }
+      return person;
+    });
   }
 
-  handleRemove(event) {
-    console.log(event);
+  handleRemove(event: People) {
+    this.people = this.people.filter((person: People) => {
+      return person.id !== event.id;
+    });
   }
 }
 
