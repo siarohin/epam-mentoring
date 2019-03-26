@@ -6,6 +6,8 @@ import { DashboardComponent } from './containers/dashboard/dashboard.component';
 import { DashboardCountComponent } from './componens/dashboard-count/dashboard-count.component';
 import { DashboardDetailComponent } from './componens/dashboard-detail/dashboard-detail.component';
 
+import { DashboardService } from './dashboard.service';
+
 @NgModule ({
   declarations: [
     DashboardComponent,
@@ -13,10 +15,13 @@ import { DashboardDetailComponent } from './componens/dashboard-detail/dashboard
     DashboardDetailComponent
   ],
   imports: [
-    CommonModule,
+    CommonModule
   ],
   exports: [
     DashboardComponent
+  ],
+  providers: [
+    DashboardService
   ]
 })
 
