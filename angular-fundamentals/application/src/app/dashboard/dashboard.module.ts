@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
 
 import { DashboardComponent } from './containers/dashboard/dashboard.component';
 
@@ -15,7 +16,8 @@ import { DashboardService } from './dashboard.service';
     DashboardDetailComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    HttpClientModule
   ],
   exports: [
     DashboardComponent
